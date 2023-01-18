@@ -6,17 +6,29 @@ function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
 
+function addLoadEvent(func) {
+    let oldOnload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = func;
+    } else {
+        window.onload = function () {
+            oldOnload();
+            func();
+        }
+    }
+}
+
 function trim(str) {
     return str.replace(/(^\s*)|(\s*$)/g, "");
 }
 
-function isEmptyObj(o) {
-    for (var p in o) return false;
+function isEmptyObj(obj) {
+    for (let p in obj) return false;
     return true;
 }
 
 function getOffset(el) {
-    var parent = el.offsetParent,
+    let parent = el.offsetParent,
         left = el.offsetLeft,
         top = el.offsetTop;
 
