@@ -1,5 +1,5 @@
 document.write(`
-    <script src="https://cdn.jsdelivr.net/gh/wanglh03/cdn/js/standard.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wanglh03/cdn@latest/js/standard.js"></script>
     <h1>${document.title}</h1>
     <p>
       <a href="./"><b>返回上级目录</b></a>。原图若较大，大图加载可能较慢。
