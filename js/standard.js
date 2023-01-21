@@ -18,6 +18,15 @@ function addLoadEvent(func) {
     }
 }
 
+function insertAfter(newElement, targetElement) {
+    let parent = targetElement.parentNode;
+    if (parent.lastChild == targetElement) {
+        parent.appendChild(newElement);
+    } else {
+        parent.insertBefore(newElement, targetElement.nextSibling);
+    }
+}
+
 function trim(str) {
     return str.replace(/(^\s*)|(\s*$)/g, "");
 }
