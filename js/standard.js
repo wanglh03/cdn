@@ -35,6 +35,13 @@ function addClass(element, value) {
     }
 }
 
+function getNextElement(node) {
+    if (node.nodeType == 1) {
+        return node;
+    }
+    return getNextElement(node.nextSibling);
+}
+
 function trim(str) {
     return str.replace(/(^\s*)|(\s*$)/g, "");
 }

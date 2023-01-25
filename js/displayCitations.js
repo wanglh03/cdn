@@ -17,7 +17,7 @@ function displayCitations() {
     let link = document.createElement("a");
     let linkText = document.createTextNode("source");
     link.appendChild(linkText);
-    link.setAttribute("href", url);
+    link.href = url;
     let superscript = document.createElement("sup");
     superscript.appendChild(link);
     // add the markup to the last element node in the blockquote
