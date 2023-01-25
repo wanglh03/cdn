@@ -27,6 +27,17 @@ function insertAfter(newElement, targetElement) {
     }
 }
 
+function addClass(element, value) {
+    if (!element.className) {
+        element.className = value;
+    } else {
+        newClassName = element.className;
+        newClassName += " ";
+        newClassName += value;
+        element.className = newClassName;
+    }
+}
+
 function trim(str) {
     return str.replace(/(^\s*)|(\s*$)/g, "");
 }
