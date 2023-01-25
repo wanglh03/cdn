@@ -1,4 +1,4 @@
-function styleHeaderSiblings(tag, className) {
+function styleElementSiblings(tag, className) {
   let headers = document.getElementsByTagName(tag);
   for (let i = 0; i < headers.length; i++) {
     let el = getNextElement(headers[i].nextSibling);
@@ -8,6 +8,6 @@ function styleHeaderSiblings(tag, className) {
 
 addLoadEvent(
   function () {
-    styleHeaderSiblings("h1", "intro");
+    styleElementSiblings("h1", "intro");
   }
 );
